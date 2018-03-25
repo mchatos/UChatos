@@ -2,7 +2,6 @@
 
 vagrant destroy --force
 
-rm -f 00*
-rm -f test
+rm -f *log
 
 vagrant up | tee std.log

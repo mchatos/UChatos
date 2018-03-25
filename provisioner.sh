@@ -1,13 +1,10 @@
 #!/bin/bash
 
-echo "Test provisionning" > /vagrant/test
-
 log="/vagrant/provisionning.log"
 
 (
 # Rename ubuntu user
-usermod -l mchatos ubuntu
-groupmod -n mchatos ubuntu
+useradd -G adm,dialout,cdrom,floppy,sudo,audio,dip,video,plugdev,netdev,lxd mchatos
 
 # Packages installation
 export DEBIAN_FRONTEND=noninteractive
