@@ -4,4 +4,4 @@ vagrant destroy --force
 
 rm -f *log
 
-vagrant up | tee std.log
+vagrant up | tee vagrant.log
